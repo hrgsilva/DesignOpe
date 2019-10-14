@@ -1,0 +1,187 @@
+*{
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+.menutop{
+    color: black;
+    font-size: 23px;
+}
+.centro{
+    padding-right: 30px;
+}
+
+a.menu:hover {
+    color: orange;
+}
+a.menu{
+    color: #D9A000;
+}
+a.menudireita{
+    text-decoration: none; /* Remove o sublinhado do link */
+    padding-left: 30px;
+}
+a.menudireita:hover{
+  color:#D9A000;
+}
+
+input::-webkit-input-placeholder { /* Modifica a cores do placeholder */
+    color: black !important;
+}
+
+.iconone{         /* Posiciona a seta e aplica propriedades de cor e tamanho */
+    font-size: 30px; 
+    padding-top: 5px; 
+    padding-left: 6px;
+    float: left;
+}
+
+
+.icontwo{         /* Posiciona a seta e aplica propriedades de cor e tamanho */
+  font-size: 30px; 
+  padding-top: 5px; 
+  padding-left: 60px
+  color: black; 
+  float: right;
+}
+
+
+
+/* ------------------------------------------Começo da sidebar */
+
+.side_content {
+    background: #272320;         /* cor da sidebar */
+    float: left;         /* Posição da sidebar */
+    font-size: 1em;         /* Tamanho da fonte usado na sidebar */
+    width: 100%;         /* Largura da sidebar dentro do container/Grid */
+}
+
+.side_content .sidebar-nav {
+    padding: 1.2em          /* Posiciona o texto/links dentro da sidebar */
+}
+
+.side_content .sidebar-nav ul li {
+    margin: 1em 0 0 0;
+    padding: 1.2em 0 1.2em 2em;         /* Posiciona os objetos da sidebar */
+    font-size: 0.7em;         /* Tamanho da fonte */
+    font-weight: 800;         /* Aplicado um negrito que pode ser alterado da forma que quiser */
+    letter-spacing: 1px;         /* Espaço entre as letras */
+    text-transform: uppercase;         /* Todo texto digitado dentro da sidebar fica com letras maiusculas */
+    position: relative;         /* Propriedade de posicionamento da sidebar em escopo geral */
+    border-bottom: 1px solid #38322E;         /* Cor da linha que separa os links */
+    list-style-type:none; 
+}
+
+.side_content .sidebar-nav ul li a {
+    color: #e9e7e6          /* Cor dos links da sidebar */
+}
+
+.side_content .sidebar-nav ul li a:hover{ /* Hover ativa as propriedados após passar o mouse */
+  text-decoration: none; /* Remove o sublinhado do link */
+  color: black; /* aplica a cor preta */
+}
+.side_content .sidebar-nav ul li a span {
+    padding: 2em 0
+}
+
+.side_content .sidebar-nav ul li a span:after {
+    content: '';
+    right: 0;
+    position: absolute
+}
+
+.side_content .sidebar-nav ul li ul {
+    padding: 1em 0
+}
+
+.side_content .sidebar-nav ul li ul li {
+    border: none;
+    font-size: .8em;
+    margin: 0;
+    padding: 1.2em 0;
+    width: 100%;
+    display: block;
+    z-index: 1;
+    font-weight: 400
+}
+
+.side_content .sidebar-nav ul li ul li span {
+    border: none
+}
+
+.side_content .sidebar-nav ul li ul li span:after {
+    content: ''
+}
+
+.side_content .sidebar-nav ul li ul li a {
+    color: #887f7b;
+    padding: 0 !important
+}
+
+.side_content .sidebar-nav ul li ul li a:hover {
+    color: #d1cdcb
+}
+
+.side_content .sidebar-nav ul li i {
+    font-size: 1.6em; /* tamanho dos icones */
+    top: 0.8em;  /* posição dos icones */
+    left: -.4em; /* posição dos icones */
+    position: absolute;
+    margin-right: 1em;
+    color: #D9A000 /* Cor dos icones */
+}
+
+
+
+
+/* ------------------------------------------Barra de Progresso------------------------------------------ */
+
+.progressbar {
+  margin: 0;
+  padding: 0;
+  counter-reset: step;
+}
+.progressbar li {
+  list-style-type: none;
+  width: 20%;
+  float: left;
+  font-size: 15px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  color: #7d7d7d;
+}
+.progressbar li:before {
+  width: 30px;
+  height: 30px;
+  content: counter(step);
+  counter-increment: step;
+  line-height: 30px;
+  border: 2px solid #7d7d7d;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  border-radius: 50%;
+  background-color: white;
+}
+.progressbar li:after {
+  width: 100%;
+  height: 2px;
+  content: '';
+  position: absolute;
+  background-color: #7d7d7d;
+  top: 15px;
+  left: -50%;
+  z-index: -1;
+}
+.progressbar li:first-child:after {
+  content: none;
+}
+.progressbar li.active {
+  color: green;
+}
+.progressbar li.active:before {
+  border-color: #55b776;
+}
+.progressbar li.active + li:after {
+  background-color: #55b776;
+}
